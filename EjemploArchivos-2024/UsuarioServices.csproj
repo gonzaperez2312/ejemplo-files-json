@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>EjemploArchivos_2024</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UsuarioData\UsuarioData.csproj" />
+    <ProjectReference Include="..\UsuarioEntities\UsuarioEntities.csproj" />
+  </ItemGroup>
+
+</Project>
