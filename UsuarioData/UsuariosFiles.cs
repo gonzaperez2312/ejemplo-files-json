@@ -14,17 +14,16 @@ namespace UsuarioData
 
             if (usuario.Id == 0)
             {
-                usuario.Id = usuarios.Count();
+                usuario.Id = usuarios.Count() + 1;
             }
             else
             {
                 usuarios.RemoveAll(x => x.Id == usuario.Id);
             }
 
-
             usuarios.Add(usuario);
 
-            var json = JsonConvert.SerializeObject(usuarios, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(usuarios, Formatting.Indented);
             File.WriteAllText(rutaArchivo, json);
         }
 
@@ -33,7 +32,7 @@ namespace UsuarioData
         {
             if (File.Exists(rutaArchivo))
             {
-                var json = File.ReadAllText(rutaArchivo);
+                string json = File.ReadAllText(rutaArchivo);
                 return JsonConvert.DeserializeObject<List<Usuario>>(json);
             }
             else

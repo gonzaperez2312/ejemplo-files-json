@@ -7,6 +7,10 @@ namespace EjemploArchivos_2024
     {
         public void CrearUsuario(Usuario usuario)
         {
+            //Validar datos del usuario
+            //Devolver error si el nombre supera mas de 50caracteres.
+            //DEvolver error si las dos contraseñas no son iguales
+
             UsuariosFiles.EscribirUsuarioAJson(usuario);
         }
 
